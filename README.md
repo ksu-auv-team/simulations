@@ -5,7 +5,7 @@ To run the simulation, download the appropriate installer. Then, run the executa
 
 You can download Unity from their website [here](https://unity3d.com/get-unity/download). You will need to create an account to use the downloaded software. The license is free for all.
 
-These simulations will be used to train multiple Convolutional Neural Networks (CNNs) to perform various tasks. The CNNs will be trained using the [TensorFlow](https://www.tensorflow.org/) library. The CNNs will be trained on a desktop computer and then deployed to the Jetson AGX Orin. The Jetson AGX Orin will then be used to run the CNNs in real time on the robot. Training will still need to take place after the robot is built, but the simulations will be used to train the CNNs before the robot is built.
+These simulations will be used to train multiple Convolutional Neural Networks (CNNs) to perform various tasks. The CNNs will be trained using the [TensorFlow](https://www.tensorflow.org/) library. The CNNs will be trained on a desktop computer and then deployed to the Jetson AGX Orin. The Jetson AGX Orin will then be used to run the CNNs in real time on the robot. Training will still need to take place after the robot is built, but the simulations will be used to train the CNNs before then.
 
 ## Simulation 1: Object Detection
 This will contain one camera viewpoint and a random object generator (random = objects taken from a set of objects that will be used by the competition). The robot will need to correctly detect the object and classify it.
