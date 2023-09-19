@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float horizontalInput;
     public float verticalInput;
+
+    public float VerticalTwo;
     public Vector3 rotationSpeed;
 
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal") * 5;
         verticalInput = Input.GetAxis("Vertical") * 5;
+        VerticalTwo = Input.GetAxis("Vertical2") * 5;
 
         if (gameObject.name == ("AUV")) 
         {
@@ -47,27 +50,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.Translate(Vector3.right * Time.deltaTime * horizontalInput);
             }
+
+
             if ( Input.GetKey(KeyCode.UpArrow) )
             {
                 Debug.Log(verticalInput);
-                transform.Translate(Vector3.up * Time.deltaTime * 5);
+                transform.Translate(Vector3.up * Time.deltaTime * VerticalTwo);
             }
             //move up
             if ( Input.GetKey(KeyCode.DownArrow) )
             {
-                transform.Translate(Vector3.up * Time.deltaTime * -5);
+                transform.Translate(Vector3.up * Time.deltaTime * VerticalTwo);
             }
             //move down
             if ( Input.GetKey(KeyCode.RightArrow) )
             {
                 transform.Rotate(Vector3.up * 100.0f * 1 * Time.deltaTime);
             }
-            //move right
+            //rotate right
             if ( Input.GetKey(KeyCode.LeftArrow) )
             {
                 transform.Rotate(Vector3.up * 100.0f * -1 * Time.deltaTime);
             }
-            //move left
+            //rotate left
 
     }
     }

@@ -7,6 +7,7 @@ public class TrashCan : MonoBehaviour
 
     private void Update()
     {
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         if (objectToDestroy == null || referenceObject == null)
         {
             Debug.LogWarning("Reference object or object to destroy is not assigned.");
@@ -24,5 +25,6 @@ public class TrashCan : MonoBehaviour
                 Destroy(objectToDestroy);
             }
         }
+        
     }
 }
